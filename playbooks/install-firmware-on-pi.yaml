@@ -1,0 +1,12 @@
+---
+- name: Update Firmware
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  vars:
+    firmware_src: '{{ repo_root | mandatory }}/firmware/.pio/build/esp32dev/firmware.bin'
+
+  roles:
+#    - firmware.build
+    - firmware.install

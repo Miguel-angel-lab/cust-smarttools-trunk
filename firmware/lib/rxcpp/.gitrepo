@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:ReactiveX/RxCpp.git
+	branch = v4.1.0
+	commit = eaf0545efef9fdccc0a6bc88f23ef0fc876c36f3
+	parent = 928c81172740387e669c95a1cccb8eeba6614aa8
+	method = merge
+	cmdver = 0.4.1

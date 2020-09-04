@@ -1,0 +1,2 @@
+- debug:
+    msg: 'you forgot to specify a vault password'

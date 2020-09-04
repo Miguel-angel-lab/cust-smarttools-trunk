@@ -1,0 +1,6 @@
+repo_root: '{{ inventory_dir | dirname }}'
+ansible_ssh_private_key: '{{ vault_ansible_ssh_private_key }}'
+ansible_python_interpreter: /usr/bin/python3
+
+platformio_user: smarttools@client.landi.io
+platformio_password: '8fce06a1813c5'

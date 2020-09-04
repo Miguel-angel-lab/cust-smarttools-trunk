@@ -1,0 +1,10 @@
+Host *.cleveland.landi.io
+	User pi
+	IdentityFile secrets/smarttools
+	Port 9900
+	ProxyCommand sh -c 'corkscrew %h %p %h 22 || /usr/bin/nc -X connect -x %h:%p %h 22'
+	PreferredAuthentications publickey
+	ServerAliveInterval 15
+	ControlMaster auto
+	ControlPersist 60
+	UserKnownHostsFile ssh_known_hosts

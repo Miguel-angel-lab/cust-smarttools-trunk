@@ -1,0 +1,15 @@
+- name: Setup local development environment
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Install dependencies (RedHat)
+      dnf:
+        name:
+          - flex
+          - bison
+          - ncurses-libs
+          - ncurses-devel
+        state: latest
+      when: ansible_facts['os_family'] == "RedHat"
+      become: yes

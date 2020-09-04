@@ -1,0 +1,9 @@
+[Unit]
+Description=PlatformIO Remote Agent
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/stdbuf -o0 -e0 /usr/local/bin/platformio remote agent start
+
+[Install]
+WantedBy=multi-user.target

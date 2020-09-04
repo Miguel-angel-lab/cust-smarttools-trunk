@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:lvgl/lv_port_esp32.git
+	branch = cd629d02d6c7281565e301ed6d1796eea888e23c
+	commit = cd629d02d6c7281565e301ed6d1796eea888e23c
+	parent = 68c27fba8fe6d7fdbd05dc43f19e2cf2ac26cf9a
+	method = merge
+	cmdver = 0.4.1

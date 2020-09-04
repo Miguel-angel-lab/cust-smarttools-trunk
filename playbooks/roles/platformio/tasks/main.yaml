@@ -1,0 +1,22 @@
+- name: Install PIO
+  pip:
+    name: platformio
+    state: latest
+
+- name: Login to account
+  shell: platformio account login -u {{ platformio_user }} -p {{ platformio_password }}
+
+- name: Install PIO Remote Agent service
+  copy:
+    src: files/platformio-remote-agent.service
+    dest: /etc/systemd/system/platformio-remote-agent.service
+  register: install_remote_agent_service
+  tags: remote_agent_service
+
+- name: Enable/start PIO Remote Agent service
+  systemd:
+    name: platformio-remote-agent.service
+    state: started
+    enabled: yes
+    daemon_reload: '{{ install_remote_agent_service.changed | bool }}'
+  tags: remote_agent_service

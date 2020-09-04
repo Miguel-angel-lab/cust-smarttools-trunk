@@ -1,0 +1,21 @@
+---
+#- name: Turn off logging service so serial port is free
+#  systemd:
+#    name: spirits-device-log.service
+#    state: stopped
+
+#- name: Turn off remote agent service so serial port is free
+#  systemd:
+#    name: spirits-device-log.service
+#    state: stopped
+
+- name: Copy firmware file
+  copy:
+    src: "{{ firmware_src }}"
+    dest: /tmp/firmware.bin
+
+- name: Install firmware
+  shell: esptool.py --port /dev/ttyUSB0 write_flash 0x00000000 /tmp/firmware.bin
+
+#- name: Restart the Pi
+#  reboot:

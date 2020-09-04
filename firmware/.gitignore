@@ -1,0 +1,6 @@
+/.pio
+/.cmake
+/cmake-*
+/sdkconfig
+/sdkconfig*.old
+/sdkconfig.cmake-*

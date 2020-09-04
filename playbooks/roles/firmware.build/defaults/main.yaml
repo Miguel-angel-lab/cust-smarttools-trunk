@@ -1,0 +1,2 @@
+---
+firmware_dir: '{{ repo_root | mandatory }}/firmware'

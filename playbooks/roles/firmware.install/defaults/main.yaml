@@ -1,0 +1,2 @@
+---
+firmware_src: '{{ repo_root | mandatory }}/firmware/dist/firmware.bin'

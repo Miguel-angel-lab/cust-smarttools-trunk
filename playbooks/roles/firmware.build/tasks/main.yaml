@@ -1,0 +1,12 @@
+---
+- name: Update firmware config
+  template:
+    src: '{{ firmware_dir }}/src/configuration.h.j2'
+    dest: '{{ firmware_dir }}/src/configuration.h'
+  delegate_to: localhost
+  become: no
+
+- name: Build the firmware
+  shell: '{{ firmware_dir }}/bin/build.sh'
+  delegate_to: localhost
+  become: no
